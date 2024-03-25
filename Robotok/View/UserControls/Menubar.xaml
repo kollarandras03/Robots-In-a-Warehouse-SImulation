@@ -21,7 +21,8 @@
             <MenuItem Header="Fájl">
                 <MenuItem Header="Szimuláció betöltése..."
                           x:Name="_loadSimulationMenuItem"/>
-                <MenuItem Header="Szimuláció mentése..." />
+                <MenuItem Header="Szimuláció mentése..."
+                          IsEnabled="False"/>
             </MenuItem>
             <MenuItem Header="Szimuláció" IsEnabled="False">
                 <MenuItem Header="" />
@@ -38,6 +39,7 @@
             <local:MenuIcon LabelText="Start"
                             IconSrc="Icons/play.png"
                             x:Name="_playButton"
+                            Width="85"
                             />
             <local:MenuIcon IconSrc="Icons/start.png"
                             x:Name="_startButton"/>
