@@ -7,9 +7,11 @@
              xmlns:converters="clr-namespace:Robotok.View.Converters"
         Padding="3,0"
         HorizontalContentAlignment="Left"
+        Name="ParentElement"
         >
     <Button.Resources>
         <converters:StringToImageSource x:Key="StringToImageSource" />
+        <local:IsEnabledToOpacityConverter x:Key="IsEnabledToOpacityConverter"/>
     </Button.Resources>
     <Grid   Height="30"
             MinWidth="30"
@@ -28,6 +30,9 @@
                 RenderOptions.BitmapScalingMode="Fant"
                 RenderOptions.EdgeMode="Aliased"
                 HorizontalAlignment="Center"
+                Opacity="{Binding   IsEnabled,
+                                    ElementName=ParentElement,
+                                    Converter={StaticResource IsEnabledToOpacityConverter}}"
                 />
 
         <Label  Grid.Column="1"
